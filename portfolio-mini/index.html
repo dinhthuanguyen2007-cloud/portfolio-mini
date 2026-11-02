@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio cá nhân của Nguyễn Đình Thuận - sinh viên Công nghệ thông tin.">
+    <title>Portfolio | Nguyễn Đình Thuận</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar container" aria-label="Điều hướng chính">
+            <a class="logo" href="#home">MyPortfolio<span>.</span></a>
+            <button class="menu-toggle" id="menu-toggle" aria-label="Mở menu" aria-expanded="false">☰</button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#home">Trang chủ</a></li>
+                <li><a href="#about">Giới thiệu</a></li>
+                <li><a href="#skills">Kỹ năng</a></li>
+                <li><a href="#projects">Dự án</a></li>
+                <li><a href="#contact">Liên hệ</a></li>
+            </ul>
+            <button class="theme-toggle" id="theme-toggle" type="button">🌙 Giao diện</button>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero section container" id="home">
+            <div class="hero-content">
+                <p class="eyebrow">XIN CHÀO, MÌNH LÀ</p>
+                <h1>Nguyễn Đình Thuận</h1>
+                <h2>Sinh viên Công nghệ thông tin</h2>
+                <p class="hero-description">Mình đang học lập trình và từng bước xây dựng các sản phẩm website bằng HTML, CSS, JavaScript và Java.</p>
+                <div class="hero-actions">
+                    <a class="btn btn-primary" href="#projects">Xem dự án</a>
+                    <a class="btn btn-outline" href="#contact">Liên hệ với mình</a>
+                </div>
+            </div>
+            <div class="hero-card">
+                <div class="avatar" aria-label="Ảnh đại diện minh họa">NT</div>
+                <h3>Nguyễn Đình Thuận</h3>
+                <p>Software / Web Development Learner</p>
+                <span class="status"><span></span> Đang học tập và phát triển</span>
+            </div>
+        </section>
+
+        <section class="section section-muted" id="about">
+            <div class="container">
+                <div class="section-heading">
+                    <p class="eyebrow">VỀ MÌNH</p>
+                    <h2>Giới thiệu bản thân</h2>
+                </div>
+                <div class="about-box">
+                    <p>Mình là sinh viên năm 2 ngành Công nghệ thông tin, yêu thích lập trình và tìm hiểu cách xây dựng website. Mục tiêu của mình là củng cố kiến thức nền tảng, rèn luyện tư duy giải quyết vấn đề và hoàn thiện nhiều dự án thực tế hơn.</p>
+                    <div class="about-details">
+                        <p><strong>Ngành học:</strong> Công nghệ thông tin</p>
+                        <p><strong>Năm học:</strong> Năm 2</p>
+                        <p><strong>Sở thích:</strong> Lập trình, chơi thể thao</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section container" id="skills">
+            <div class="section-heading">
+                <p class="eyebrow">NHỮNG GÌ MÌNH BIẾT</p>
+                <h2>Kỹ năng</h2>
+                <p>Các kiến thức mình đang học và thực hành.</p>
+            </div>
+            <div class="skills-grid">
+                <article class="skill-card"><span class="skill-icon">☕</span><h3>Java</h3><p>Lập trình cơ bản, OOP và cấu trúc dữ liệu.</p></article>
+                <article class="skill-card"><span class="skill-icon">🌐</span><h3>HTML5</h3><p>Xây dựng cấu trúc trang web semantic.</p></article>
+                <article class="skill-card"><span class="skill-icon">🎨</span><h3>CSS / SCSS</h3><p>Định dạng giao diện, Flexbox, Grid và responsive.</p></article>
+                <article class="skill-card"><span class="skill-icon">⚡</span><h3>JavaScript</h3><p>DOM, Event, Fetch API và LocalStorage.</p></article>
+                <article class="skill-card"><span class="skill-icon">🐙</span><h3>Git / GitHub</h3><p>Quản lý phiên bản và lưu trữ mã nguồn.</p></article>
+            </div>
+        </section>
+
+        <section class="section section-muted" id="projects">
+            <div class="container">
+                <div class="section-heading">
+                    <p class="eyebrow">SẢN PHẨM CỦA MÌNH</p>
+                    <h2>Dự án tiêu biểu</h2>
+                    <p>Dữ liệu dự án được tải từ tệp JSON bằng Fetch API.</p>
+                </div>
+                <p class="loading-message" id="project-status" role="status">Đang tải danh sách dự án...</p>
+                <div class="projects-grid" id="project-list"></div>
+            </div>
+        </section>
+
+        <section class="section container" id="contact">
+            <div class="section-heading">
+                <p class="eyebrow">KẾT NỐI VỚI MÌNH</p>
+                <h2>Liên hệ</h2>
+                <p>Điền thông tin bên dưới để gửi lời nhắn.</p>
+            </div>
+            <form class="contact-form" id="contact-form" novalidate>
+                <div class="form-group">
+                    <label for="name">Họ và tên</label>
+                    <input type="text" id="name" name="name" placeholder="Nhập họ và tên">
+                    <small class="error-message" id="name-error"></small>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="example@gmail.com">
+                    <small class="error-message" id="email-error"></small>
+                </div>
+                <div class="form-group">
+                    <label for="message">Nội dung</label>
+                    <textarea id="message" name="message" rows="5" placeholder="Nhập nội dung liên hệ"></textarea>
+                    <small class="error-message" id="message-error"></small>
+                </div>
+                <button class="btn btn-primary" type="submit">Gửi lời nhắn</button>
+                <p class="form-status" id="form-status" role="status"></p>
+            </form>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-content">
+            <p>© 2026 Nguyễn Đình Thuận. Portfolio Mini.</p>
+            <a href="#home">Lên đầu trang ↑</a>
+        </div>
+    </footer>
+</body>
+</html>
